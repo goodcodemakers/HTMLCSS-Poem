@@ -1,0 +1,143 @@
+a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 5px;
+  width: 0;
+  height: 10px;
+  background-color: rgba(255, 255, 0, 0.5);
+  transition: all 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+body {
+  background-image: url(./bgimg.png);
+  background-attachment: fixed;
+  margin: 90px 0 0 0;
+  padding: 0;
+}
+#title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0px;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 48px;
+  margin: 0;
+}
+.poem-nav ul {
+  font-size: 16px;
+  padding: 0;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 38px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#poem1,
+#poem2,
+#poem3,
+#poem4,
+#poem5 {
+  margin: auto;
+  width: 80%;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 2em;
+}
+#poem1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./flower1.jpg);
+}
+#poem2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./flower2.jpg);
+}
+#poem3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./star.jpg);
+}
+#poem4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./dear.jpg);
+}
+#poem5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./river.jpg);
+}
+
+.up {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 700px) {
+  .upwhite {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  h2 {
+    font-size: 18px;
+  }
+  p,
+  b {
+    font-size: 12px;
+  }
+  .poem-nav {
+    display: none;
+  }
+  body {
+    margin: 60px 0 0 0;
+  }
+  #poem1,
+  #poem2,
+  #poem3,
+  #poem4,
+  #poem5 {
+    width: 95%;
+    height: 100%;
+    line-height: 1em;
+    background-attachment: scroll;
+  }
+  .up {
+    display: none;
+  }
+  .upwhite {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+  }
+}
